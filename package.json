@@ -1,0 +1,24 @@
+{
+  "name": "aoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bensoutendijk/aoc.git"
+  },
+  "author": "Ben Soutendijk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bensoutendijk/aoc/issues"
+  },
+  "homepage": "https://github.com/bensoutendijk/aoc#readme",
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  }
+}
