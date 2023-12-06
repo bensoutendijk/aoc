@@ -45,8 +45,8 @@ function isGameMatch(game: ReturnType<typeof parseGame>) {
 }
 function parseGame(str: string) {
 	const id = str.match(/Game\s([0-9]+)/)?.[1]
-	
-	const rounds = str.match
+	// https://regex101.com/r/WIoJer/1
+	// const rounds = str.match
 	return {
 		id,
 		rounds: [
