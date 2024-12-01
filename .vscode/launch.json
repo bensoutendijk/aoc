@@ -4,22 +4,16 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Run Typescript File",
-      "runtimeExecutable": "docker",
-      "runtimeArgs": [
-        "run",
-        "--rm",
-        "-v",
-        "${workspaceFolder}:/app",
-        "-w",
-        "/app",
-        "node:18-alpine",
-        "npx",
-        "ts-node"
-      ],
+      "name": "Run Typescript File with tsx",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx"],
       "program": "${file}",
+      "cwd": "${workspaceFolder}",
       "skipFiles": ["<node_internals>/**"],
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "env": {
+        "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
+      }
     },
     {
       "name": "Docker Node.js Launch",

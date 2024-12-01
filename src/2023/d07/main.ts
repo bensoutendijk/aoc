@@ -30,6 +30,7 @@ const CARDS = [
   "2",
   "J",
 ] as const;
+
 const HANDS: {
   label: string;
   match: (hand: string) => boolean;
@@ -64,12 +65,10 @@ const HANDS: {
       for (const [char, count] of charCount.entries()) {
         const jokers = charCount.get("J") || 0;
         if (count === 2 || count + jokers === 2) {
-          console.log(char, count)
           pairCount++;
         }
 
         if (count === 3 || count + jokers === 3) {
-          console.log(char, count)
           tripleCount++;
         }
       }
@@ -127,8 +126,6 @@ const HANDS: {
 let answer = 0;
 let plays: { hand: string; bid: number }[][] = [];
 rl.on("line", (line) => {
-  // Process each line here
-  // console.log(line);
   const hand = line
     .split(" ")[0]
     .match(/(\w|\d)/g)
@@ -167,8 +164,8 @@ rl.on("close", () => {
     if (hands.length) {
       console.log(HANDS[i].label);
       hands.forEach((hand) => {
+        console.log(hand)
         if (hand.hand.includes("J")) {
-          console.log(hand)
         }
       });
     }
